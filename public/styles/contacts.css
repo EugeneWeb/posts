@@ -1,0 +1,19 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+}  
+.contacts__list {
+    padding: 10px 20%;
+    border: 2px solid black;
+    border-radius: 10px;
+}  
+.contacts__list-item:not(:last-child) {
+    margin-bottom: 20px;
+}  
+
+.contacts__link {
+    font-size: 20px;
+}  
+.contacts__link:hover {
+    text-decoration: underline;
+}  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="stylesheet" href="../styles/editPost.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main class="main">
+        <!-- Так как по умолчанию в html нельзя делать put методы, используем пакет method-override и url параметры -->
+        <!-- ОБЯЗАТЕЛЬНО ДАЁМ name'ы для input'ов -->
+        <form class="post" action="/edit-post/<%= post.id %>?_method=PUT" method="post">
+            
+            <div class="post-info">
+                <input class="post-author" value="<%= post.author %>" name="author">
+
+                <p><%= new Date(post.createdAt).toLocaleString('ru') %></p>
+            </div>
+
+            <div class="post-content">
+                <input class="post-title" value="<%= post.title %>" name="title">
+                <textarea class="post-text" name="text"><%= post.text %></textarea>
+            </div>
+
+            <div class="post-btn">
+                <button type="submit">Применить</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const postText = document.querySelector('.post-text')
+        postText.style.height = `${postText.scrollHeight}px`
+    </script>
+
+<%- include('./partials/foot.ejs') %>
+
+

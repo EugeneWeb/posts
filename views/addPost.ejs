@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/head.css">
+    <link rel="stylesheet" href="./styles/addPost.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main class="main">
+        <%- include('./partials/title.ejs') %>
+
+        <form action="add-post" method="post" id="post-form">
+            <div class="post-info">
+                    <input type="text" name="title" placeholder="Заголовок">
+                    <input type="text" name="author" placeholder="Автор">
+            </div>
+
+            <div class="post-text">
+                <textarea name="text" placeholder="Текст поста"></textarea>
+            </div>
+
+            <div class="post-btn">
+                <button type="submit">Отправить</button>
+            </div>
+
+        </form>
+    </main>
+
+<%- include('./partials/foot.ejs') %>

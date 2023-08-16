@@ -1,0 +1,57 @@
+.post {
+    position: relative;
+    
+    padding: 90px;
+
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+.post:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    cursor: default;
+}
+
+.post-title {
+    margin-bottom: 40px;
+
+    font-size: 40px;
+}
+
+.previous-page {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.post-edit {
+    display: block;
+
+    width: 30px;
+    height: 30px;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
